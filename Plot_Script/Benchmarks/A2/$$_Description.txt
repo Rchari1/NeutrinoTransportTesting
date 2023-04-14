@@ -1,0 +1,6 @@
+Old timestep algorithm
+Model = '001'
+t_end  = 1.0d-02
+dt_grw = 1.01
+tolC  = 1.0d-03
+Scheme  = 'ExplicitAsymptotic'
