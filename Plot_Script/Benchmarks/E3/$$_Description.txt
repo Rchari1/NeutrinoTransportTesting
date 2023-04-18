@@ -1,6 +1,0 @@
-Old timestep algorithm
-Model = '003'
-t_end  = 1.0d-01
-dt_grw = 1.07
-tolC  = 1.0d-04
-Scheme  = 'ExplicitAsymptotic'
