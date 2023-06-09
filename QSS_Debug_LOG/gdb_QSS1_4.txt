@@ -1,0 +1,63 @@
+GNU gdb (Ubuntu 9.2-0ubuntu1~20.04.1) 9.2
+Copyright (C) 2020 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from NT.out...
+(gdb) b 261
+Breakpoint 1 at 0x9edc: file NeutrinoTransport.cpp, line 261.
+(gdb) r
+Starting program: /home/jared/NeutrinoTransport/NT.out 
+Time since simulation initiation: 6.07288e-13 seconds passed
+dt: 1.92186e-14
+Time since simulation initiation: 1.22785e-11 seconds passed
+dt: 3.69356e-13
+Time since simulation initiation: 2.36584e-10 seconds passed
+dt: 7.09851e-12
+Time since simulation initiation: 4.54742e-09 seconds passed
+dt: 1.36424e-10
+Time since simulation initiation: 8.73959e-08 seconds passed
+dt: 2.62188e-09
+Time since simulation initiation: 1.67963e-06 seconds passed
+dt: 5.03889e-08
+
+Breakpoint 1, main () at NeutrinoTransport.cpp:261
+261	                BuildCollisionMatrix_NES( R_In, R_Out, Nold, dV, N_g, 0.0, cMat, kVec );
+(gdb) b 269
+Breakpoint 2 at 0x55555555e0a4: file NeutrinoTransport.cpp, line 269.
+(gdb) c
+Continuing.
+
+Breakpoint 2, main () at NeutrinoTransport.cpp:269
+269	            double sum_Nnew_dV = std::inner_product(Nnew.begin(), Nnew.end(), dV.begin(), 0.0);
+(gdb) p N_new[K[K[K[Knew
+$1 = std::vector of length 40, capacity 40 = {0.35163879519078789, 
+  0.70851976061829036, 0.85271130071718293, 0.91108755396633256, 
+  0.93360857609400361, 0.94017141763581857, 0.93875109874673723, 
+  0.93246501118475189, 0.9223495053775238, 0.90846097141769644, 
+  0.89031356424708641, 0.86705513533545686, 0.83755289815577549, 
+  0.80047882288812433, 0.75446114997795211, 0.69836023481916032, 
+  0.63170140324631441, 0.55522201738847088, 0.47135400669627608, 
+  0.38432904566839854, 0.29961681947907187, 0.22271600946981551, 
+  0.15776410576738148, 0.10660825924204442, 0.068852280477030028, 
+  0.042630905289099401, 0.025370217490279831, 0.014530561646060336, 
+  0.0080135161277970872, 0.0042543620317205891, 0.0021722747654416585, 
+  0.0010652091657798683, 0.00050071759444716448, 0.00022514326813540377, 
+  9.6608958045854001e-05, 3.9465716983268223e-05, 1.5314081609778996e-05, 
+  5.6359627478340068e-06, 1.9679985354073368e-06, 2.5455053636608727e-07}
+(gdb) quit
+A debugging session is active.
+
+	Inferior 1 [process 54623] will be killed.
+
+Quit anyway? (y or n) y

@@ -1,0 +1,62 @@
+GNU gdb (Ubuntu 9.2-0ubuntu1~20.04.1) 9.2
+Copyright (C) 2020 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from NT.out...
+(gdb) break 324
+Breakpoint 1 at 0xa58a: file NeutrinoTransport.cpp, line 324.
+(gdb) r
+Starting program: /home/jared/NeutrinoTransport/NT.out 
+Time since simulation initiation: 6.07288e-13 seconds passed
+dt: 1.92186e-14
+Time since simulation initiation: 1.22785e-11 seconds passed
+dt: 3.69356e-13
+Time since simulation initiation: 2.36584e-10 seconds passed
+dt: 7.09851e-12
+Time since simulation initiation: 4.54742e-09 seconds passed
+dt: 1.36424e-10
+Time since simulation initiation: 8.73959e-08 seconds passed
+dt: 2.62188e-09
+Time since simulation initiation: 1.67963e-06 seconds passed
+dt: 5.03889e-08
+
+Breakpoint 1, main () at NeutrinoTransport.cpp:324
+324	                std::vector<double> r0(N_g);    //r0
+(gdb) p Nold
+$1 = std::vector of length 40, capacity 40 = {0.96629570902134909, 
+  0.97915343541350697, 0.97845258514420319, 0.97781531681141587, 
+  0.97724975078099163, 0.97674369937823791, 0.9762546006069055, 
+  0.97569010082042418, 0.97488102879494232, 0.97354545054550812, 
+  0.97124345762048137, 0.96732484647590411, 0.9608771343824678, 
+  0.95069117788395374, 0.93527724005532775, 0.91298314535459824, 
+  0.88227528173460712, 0.84221321874920108, 0.79304416643216058, 
+  0.7366747123219497, 0.67667088492215299, 0.61759056259310086, 
+  0.5638732806441098, 0.51885314334511179, 0.48436190022929537, 
+  0.46096302139886802, 0.44852859025262148, 0.4468453940567656, 
+  0.45608763709533662, 0.47712651528872385, 0.51166200710378718, 
+  0.56199030367815084, 0.6296222842435899, 0.71010932983253916, 
+  0.77579033728962798, 0.72408396489826288, 0.1883794102743348, 
+  1.0604595569847906, -36.437997060709037, 27.862366390632651}
+(gdb) ^?[Kstd::min_element(inv_k.begin(), inv_k.end())
+(gdb) std::min_element(inv_k.begin(), inv_k.end())[C[1P[1P[1P[1P[1P
+(gdb) p t
+$2 = 2.7034148192974804e-05
+(gdb) p dt
+$3 = 8.1102444678924476e-07
+(gdb) p dt[K[K[K[Kquit
+A debugging session is active.
+
+	Inferior 1 [process 37452] will be killed.
+
+Quit anyway? (y or n) y

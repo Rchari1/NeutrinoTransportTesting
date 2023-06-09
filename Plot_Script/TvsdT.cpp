@@ -4,13 +4,13 @@ using namespace std;
 #include <string>
 #include <vector>
 #include <gnuplot-iostream.h>
-#include "../Source/GetTrace_Plotfile2.h"
+#include "/home/jared/NeutrinoTransport/Source/GetTrace_Plotfile2.h"
 
 int main() {
 
-string FileDir = "/home/jared/NeutrinoTransport/Plot_Script/Bin";
+string FileDir = "/home/jared/NeutrinoTransportTesting/Plot_Script/Bin";
 string FileName = "PlotFile_";
-string FileDir2 = "/home/jared/NeutrinoTransport/Plot_Script/Benchmarks/B2";
+string FileDir2 = "/home/jared/NeutrinoTransportTesting/Plot_Script/Benchmarks/B2";
 
 int Lo = 0;
 int Hi = 98;
