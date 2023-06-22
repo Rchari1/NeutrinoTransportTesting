@@ -1,0 +1,770 @@
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =1e-07
+ Scheme=ExplicitAsymptotic
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =1e-07
+ Scheme=ExplicitAsymptotic
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS1
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS1
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS1
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS1
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS1
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS1
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS1
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS1
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS1
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS1
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=ExplicitAsymptotic
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=ExplicitAsymptotic
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS1
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS1
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS1
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS1
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS1
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS1
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS1
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS1
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS1
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS1
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS2
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS1
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS1
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS1
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS1
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS1
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS2
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS2
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS2
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS2
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS1
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS1
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS1
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS2
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS2
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS2
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS1
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS2
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS2
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS2
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS2
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS2
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS2
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS2
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS2
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS2
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS2
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS2
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS2
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS2
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS2
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS1
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS2
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS1
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS1
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS1
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS1
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS2
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS2
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS1
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=QSS1
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.0001
+ Scheme=ExplicitAsymptotic
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =1e-06
+ Scheme=QSS2
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =1e-06
+ Scheme=QSS2
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-10
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =1e-06
+ Scheme=QSS2
+ Comment: 
+
+ t_end =0.01
+ t =1e-15
+ t_W0 =1e-11
+ dt =1e-15
+ G_A =0.75
+ G_B =100
+ G_C =7.07107
+ tolC =0.001
+ Scheme=ExplicitAsymptotic
+ Comment: 
+
