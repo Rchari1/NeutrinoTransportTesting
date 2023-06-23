@@ -1,0 +1,7 @@
+Old timestep algorithm
+Model = '001'
+t_end  = 1.0d-04
+t_W0   = 1.0d-11; 
+dt_grw = 1.03
+tolC  = 1.0d-04
+Scheme  = 'BackwardEuler'
