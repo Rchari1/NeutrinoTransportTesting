@@ -1,0 +1,13 @@
+sudo apt update
+sudo apt upgrade jupyter-notebook
+
+then try:
+jupyter-notebook
+
+if it still dosen't work
+
+pip install --upgrade jupyter_core
+
+or 
+
+pip3 install --upgrade jupyter_core
