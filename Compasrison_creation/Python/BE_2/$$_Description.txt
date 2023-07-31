@@ -1,0 +1,59 @@
+Model = '003'; % --- Determines Local Thermodynamic Conditions
+N_g   = 40;    % --- Number of Energy Groups (Must be 40)
+
+t_end  = 1.0d-02; % [ s ] Final time
+t      = 1.0d-15; % [ s ] Initial time
+t_W0   = 1.0d-11; % [ s ] Initial write time
+dt_min = 1.0d-16; % [ s ] Minimum time step
+dt_max = 1.0d-01; % [ s ] Maximum time step
+dt     = 1.0d-15; % [ s ] Initial time step
+dt_grw = 1.03;    % Max dt growth per time step
+dt_dec = 0.90;    % Decline factor for dt if restep
+
+dt_FE  = dt;
+dt_EA  = dt;
+dt_PE  = dt;
+dt_FE_prime = 1.0d-9;
+
+amp      = 0.0d-03; % Amplitude of Perturbation Function
+reStart  = 0;       % For restarting run at a specific data file
+PertCase = 2;       % Sets the type of perturbation the algorith runs
+
+Order = 6;          % Number of order for QSS3, starts at 2
+
+G_A = 7.5d-01;    % Gaussian Amplitude
+G_B = 1.0d+02;    % Gaussian Expected Value
+G_C = sqrt(50.0); % Gaussian Width
+
+cycleM = 10^9;    % Maximum Cycles
+cycleD = 100;     % Display Interval
+cycleW = 10;      % Write Interval
+
+tolPE = 1.0d-03;  % Partial Equilibrium Tolerance
+tolC  = 1.0d-02;  % Particle Conservation Tolerance
+tolBE = 1.0d-08;  % Convergence Tolerance For Backward Euler
+tolFP = 1.0d-09;  % Convergence Tolerance For Fixed Point Iteration
+tolN  = 1.0d-03;  % Relative Density Tolerance For Methods 
+
+FE    = 0;
+EA    = 1;
+FE_PE = 2;
+EA_C  = 3;
+QSS1  = 4;
+QSS2  = 5;
+BE    = 6;
+FP    = 7;
+QSS3  = 8;
+AFP   = 9;
+
+Scheme  = 'BackwardEuler';
+
+Comment = '';
+
+PlotFileDir    = 'C:\Users\adamh\Documents\GitHub\Collisionator\Output';
+PlotFileName   = 'PlotFile';
+PlotFileNumber = 0;
+RestartDir     ='./Output';
+RestartFileName ='PlotFile';
+RestartFileNumber = 0;
+nPlotFiles = 175; 
