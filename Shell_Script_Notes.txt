@@ -1,0 +1,11 @@
+We want to create a shell script workflow to stream line plot production. 
+
+Python script
+
+Requirements:
+
+1). Must complile CPP code
+2). Save log data to file
+3). Move output data to relivant file structure
+4). Read log data into python 
+5). compile python script
