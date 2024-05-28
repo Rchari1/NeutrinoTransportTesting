@@ -1,0 +1,33 @@
+bool Time_Crono = true;
+
+//Put above While loop
+double Time_Sum_1 = 0.0;
+int Time_idx_1 = 0;
+double Time_Sum_2 = 0.0;
+int Time_idx_2 = 0;
+
+//Rest of code
+
+//Start Clock
+auto start_1 = high_resolution_clock::now();
+
+//Preform Calculation
+
+//Stop Clock
+auto stop_1 = high_resolution_clock::now();
+
+//Update_idx
+auto duration_1 = duration_cast<microseconds>(stop_1 - start_1);
+Time_Sum_1 += std::chrono::duration<double>(duration_1).count();
+Time_idx_1 ++;
+
+//Rest of code
+
+//This outputs the data, put at end of the code. 
+if (Time_Crono == true){
+double avg_t_1 = Time_Sum_1/Time_idx_1;
+double avg_t_2 = Time_Sum_2/Time_idx_2;
+
+printf("The average time of GPU_BCM is %f seconds\n", avg_t_1);
+printf("The average time of CPU_BCM is %f seconds\n", avg_t_2);
+}

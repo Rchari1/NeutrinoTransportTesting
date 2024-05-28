@@ -1,0 +1,38 @@
+close all
+clear all
+
+%addpath( '../Source' ); addpath( '../Data' );
+addpath( '/home/jared/Collisionator/Source' )
+
+i = 1;
+
+%****************************
+% Naming Convention:
+% Initial conditions and approximation methods
+% A: dt_grw = 1.01; B: dt_grw = 1.03; C: dt_grw = 1.07; D: dt_grw = 1.10
+% _P: Predictor; _C: Corrector
+%
+% variables:
+%t = time; dt = timestep; N = density; dN = change in density;
+%TC = total cycles
+%****************************
+
+
+[ tVec, dtVec, dNVec, kVec, cMat, cycleVec, truecycleVec, nIterationsVec, nTrueIterationsVec, NMat, eC, Branch, EQU_Cond, dt_FE, dt_EA, dt_PE ]=GetTrace_Plotfile('/home/jared/Collisionator/Run/Output','PlotFile',0,100);
+
+figure; hold on;
+
+colors = [0 0 0; 1 0 0]; % Black and red colors
+numPlots = size(EQU_Cond, 2);
+
+for i = 1:numPlots
+    y = EQU_Cond(:, i);
+    y_color = colors(y + 1, :); % Use 1 as index for red, 0 for black
+    
+    area(tVec, y, 'FaceColor', y_color, 'EdgeColor', 'none', 'DisplayName', ['Plot ' num2str(i)]);
+end
+
+xlim([1e-14, 1e2]); % Set x-axis limits from 10^-14 to 10^2
+ylim([0, 1]); % Set y-axis limits from 0 to 1
+set(gca, 'XScale', 'log'); % Set x-axis to log scale
+legend('show'); % Display legend with plot labels
