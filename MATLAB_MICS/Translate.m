@@ -16,7 +16,7 @@ addpath( '/home/jared/Collisionator/Run/Output');
 %TC = total cycles
 %****************************
 
-numPlotfile = 100;
+numPlotfile = 150;
 RG = 40;
 FileDir    = '/home/jared/NeutrinoTransportTesting/MATLAB_MICS/Translated';
 plotFileName   = 'PlotFile';

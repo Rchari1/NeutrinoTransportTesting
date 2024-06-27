@@ -1,0 +1,14 @@
+Simulation Summary:
+Final simulation time: 1.59338 seconds
+Target end time: 1 seconds
+Wall-clock time: 655511 microseconds
+Tolerance (TolC): 1e-06
+Absolute Error Tolerance (EpsA): 0.0005
+Relative Error Tolerance (EpsR): 5e-05
+Number of Energy Groups (N_g): 40
+Chemical Potential (mu): 167.954
+Temperature (kT): 19.8543
+Density (Rho): 1.516e+14
+Electron Fraction (Ye): 0.2599
+Scattering Kernal: 1
+Comments: Logfile Written Successfully. (Note: Wallclock Times only Apply for ExplicitAsymptotic scheme
