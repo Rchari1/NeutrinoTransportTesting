@@ -1,0 +1,32 @@
+
+
+Open Terminal.
+
+Navigate to the location of your Git repository.
+
+
+First give command:
+$ touch .gitignore
+
+If the command succeeds, there will be no output.
+
+If you want to ignore a file that is already checked in, you must untrack the file 
+before you add a rule to ignore it. From your terminal, untrack the file.
+
+$ git rm --cached FILENAME
+
+ex: git rm --cached Output/PlotFile_*
+
+ex: git rm --cached Output/ -r
+
+Now open the file using 
+
+$  vim .git/info/exclude
+
+and add all the things you want to ignore. Here are mine:
+
+Output
+Output/PlotFile_*
+simulation_log.txt
+FENN
+
