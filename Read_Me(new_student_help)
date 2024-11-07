@@ -1,0 +1,56 @@
+Hello! 
+
+This is a document intended to be an on boarding guide to information regarding the FERN/FENN research group. 
+
+Description of FERN:
+https://github.com/FERNmatrix/Thermo-nuclear-network.git
+This is a Thermo-nuclear-network code that simulates the evolution of nuclear species in astrophysicaly significant conditions. There is a markdown file names README that has description of all primary files. 
+
+Description of FENN: 
+https://github.com/Rchari1/FENN.git
+This is compile simulation that evolves neutrino energy specter of a population of neutrinos under physical condition that are emblematic of type two core collapse super nova.  
+
+Description of Testing Repo(this repository):
+This is a testing repository intended for all useful tools regarding the FENN code. It is intended for documenting development, storing debugging tools, and plotting scripts. 
+
+
+Live word document with reading list(feel free to add things!):
+https://liveutk-my.sharepoint.com/:w:/g/personal/acole32_vols_utk_edu/EZ9aIQ6fqhdOswldo2sXZ18Bv1u_1S6t7qoJdkABt7GO5g?e=jKcCVP
+
+Old Google drive with my stuff from undergraduate:
+https://drive.google.com/drive/folders/1ffcWICoYn3jDQoTBCvH1K3CY7Gj9S4GD?usp=sharing
+
+
+Useful links:
+
+https://stackoverflow.com/questions/10219225/c-create-string-of-text-and-variables
+
+https://www.youtube.com/watch?v=hwrnmQumtPw&ab_channel=DerekBanas
+^^ this also has a VIM tutorial
+
+https://api.projectchrono.org/tutorial_demo_gnuplot.html
+^^^ gnuplot examples
+
+https://www.researchgate.net/post/What_is_the_difference_between_implicit_and_explicit_solutions_of_the_numerical_solutions
+
+https://www.phy.ornl.gov/groups/astro_theory/ccsn/ccmodeling.html
+
+https://www.csm.ornl.gov/astro/
+
+http://homepage.math.uiowa.edu/~whan/3800.d/S8-4.pdf
+
+https://valgrind.org/
+
+https://github.com/jayjaybillings/fern
+
+https://github.com/jayjaybillings/kelvin-1
+
+https://github.com/jayjaybillings/kelvin-1
+
+https://www.youtube.com/watch?v=47sZhrJ1USY
+
+https://fern-szr4672.slack.com/files/U02DXPAN665/F049MRGQT1S/an_explicit_asymptotic_approach_applied_to_neutrino-electron_scat.pdf
+
+https://cplusplus.com/doc/tutorial/files/
+
+https://tex.stackexchange.com/questions/14957/how-to-get-text-above-and-below-double-harpoon-reversible-reaction-symbols-in

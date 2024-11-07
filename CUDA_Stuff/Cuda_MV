@@ -1,0 +1,65 @@
+#include <iostream>
+#include <vector>
+#include <cuda_runtime.h>
+
+__global__ void matrixVectorProductKernel(const double* cMat, const double* Nold, double* Nnew_2, int N_g, double dt) {
+    int i = blockIdx.x * blockDim.x + threadIdx.x;
+
+    if (i < N_g) {
+        for (int j = 0; j < N_g; j++) {
+            atomicAdd(&Nnew_2[i], dt * cMat[i * N_g + j] * Nold[j]);
+        }
+    }
+}
+
+void MatrixVectorProduct_CUDA(const std::vector<std::vector<double>>& cMat,
+                              const std::vector<double>& Nold,
+                              std::vector<double>& Nnew_2,
+                              int N_g,
+                              double dt) {
+    // Allocate device memory
+    double* d_cMat;
+    double* d_Nold;
+    double* d_Nnew_2;
+
+    cudaMalloc((void**)&d_cMat, N_g * N_g * sizeof(double));
+    cudaMalloc((void**)&d_Nold, N_g * sizeof(double));
+    cudaMalloc((void**)&d_Nnew_2, N_g * sizeof(double));
+
+    // Copy data to device
+    cudaMemcpy(d_cMat, &cMat[0][0], N_g * N_g * sizeof(double), cudaMemcpyHostToDevice);
+    cudaMemcpy(d_Nold, Nold.data(), N_g * sizeof(double), cudaMemcpyHostToDevice);
+    cudaMemcpy(d_Nnew_2, Nnew_2.data(), N_g * sizeof(double), cudaMemcpyHostToDevice);
+
+    // Launch kernel
+    int threadsPerBlock = 256;
+    int blocksPerGrid = (N_g + threadsPerBlock - 1) / threadsPerBlock;
+
+    matrixVectorProductKernel<<<blocksPerGrid, threadsPerBlock>>>(d_cMat, d_Nold, d_Nnew_2, N_g, dt);
+
+    // Copy result back to host
+    cudaMemcpy(Nnew_2.data(), d_Nnew_2, N_g * sizeof(double), cudaMemcpyDeviceToHost);
+
+    // Free device memory
+    cudaFree(d_cMat);
+    cudaFree(d_Nold);
+    cudaFree(d_Nnew_2);
+}
+
+int main() {
+    // Example usage
+    std::vector<std::vector<double>> cMat = {{...}}; // Proper values for cMat
+    std::vector<double> Nold = {...};                // Proper values for Nold
+    std::vector<double> Nnew_2 = {...};              // Proper values for Nnew_2
+    int N_g = cMat.size();
+    double dt = 0.1; // Replace with the actual value of dt
+
+    MatrixVectorProduct_CUDA(cMat, Nold, Nnew_2, N_g, dt);
+
+    // Print or use the results as needed...
+    for (int i = 0; i < N_g; i++) {
+        std::cout << "Nnew_2[" << i << "]: " << Nnew_2[i] << std::endl;
+    }
+
+    return 0;
+}

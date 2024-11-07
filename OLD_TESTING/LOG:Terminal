@@ -1,0 +1,143 @@
+jared@adam-X555QA:~$ ls 
+'Assignment 8.pdf'     Notebook
+ auto_script.sh        Pictures
+ CPP.c                 pkglist
+ datafile              Public
+ Desktop               qt-unified-linux-x64-4.3.0-1-online.run
+ Documents            'Re _Meeting_schedule'
+ Downloads            'Re _Meeting_schedule.zip'
+ ffmpeg                Script.sh
+ Formulas8.pdf         Steam
+ forty                 Templates
+ gnuplot-5.2.8.        temp.txt
+ graph.ps              test3.sh
+ gtk-build             Thermo-nuclear-network
+ Hello_jsrun          'Untitled Document'
+ jared                 Videos
+'More Problems8.pdf'   wxWidgets-3.1.5
+ mozilla.pdf           wxWidgets-3.1.5.tar.bz2
+ Music                 yum-3.4.3
+jared@adam-X555QA:~$ cd Thermo-nuclear-network/
+jared@adam-X555QA:~/Thermo-nuclear-network$ ls
+CompareT5.sh  explicitMatrix  old_explicitMatrix         tars
+CompareT7.sh  GNUplots.gnu    Prev_Presentations_Papers  tutorials
+cudaCodeOld   matlab          README.md
+jared@adam-X555QA:~/Thermo-nuclear-network$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   explicitMatrix/data/rateLibrary_pp.data
+	modified:   explicitMatrix/explicitMatrix.cpp
+
+no changes added to commit (use "git add" and/or "git commit -a")
+jared@adam-X555QA:~/Thermo-nuclear-network$ git restore explicitMatrix/data/rateLibrary_pp.data
+jared@adam-X555QA:~/Thermo-nuclear-network$ git restore explicitMatrix/explicitMatrix.cpp
+jared@adam-X555QA:~/Thermo-nuclear-network$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+jared@adam-X555QA:~/Thermo-nuclear-network$ git pull 
+remote: Enumerating objects: 347, done.
+remote: Counting objects: 100% (347/347), done.
+remote: Compressing objects: 100% (178/178), done.
+remote: Total 347 (delta 237), reused 257 (delta 165), pack-reused 0
+Receiving objects: 100% (347/347), 1.58 MiB | 68.00 KiB/s, done.
+Resolving deltas: 100% (237/237), completed with 12 local objects.
+From https://github.com/FERNmatrix/Thermo-nuclear-network
+   fa03365..617f37b  master             -> origin/master
+   e1a8bec..a1aecde  guidry_debug1      -> origin/guidry_debug1
+ * [new branch]      guidry_debug2      -> origin/guidry_debug2
+ * [new branch]      guidry_debugSpline -> origin/guidry_debugSpline
+Updating fa03365..617f37b
+Fast-forward
+ explicitMatrix/.gitignore                         |    4 +
+ explicitMatrix/DEBUGGER/README_BREAKPOINT_PLOTTER |   72 +-
+ explicitMatrix/explicitMatrix.cpp                 |  930 +--
+ explicitMatrix/explicitMatrix_withDiagnostics.cpp | 6292 +++++++++++++++++++++
+ explicitMatrix/gnu_out/fluxTracker.out            | 2052 +++++++
+ explicitMatrix/gnu_out/gnuplot_X.gnu              |   58 +-
+ explicitMatrix/gnu_out/gnuplot_frac.gnu           |   18 +-
+ explicitMatrix/gnu_out/gnuplot_stiffstuff.gnu     |   10 +-
+ explicitMatrix/gnuplot_diagnostics6_log.gnu       |  156 +
+ explicitMatrix/gnuplot_diagnosticsFlux_log.gnu    |  157 +
+ 10 files changed, 8823 insertions(+), 926 deletions(-)
+ create mode 100644 explicitMatrix/.gitignore
+ create mode 100644 explicitMatrix/explicitMatrix_withDiagnostics.cpp
+ create mode 100644 explicitMatrix/gnu_out/fluxTracker.out
+ create mode 100644 explicitMatrix/gnuplot_diagnostics6_log.gnu
+ create mode 100644 explicitMatrix/gnuplot_diagnosticsFlux_log.gnu
+jared@adam-X555QA:~/Thermo-nuclear-network$ git branch -av
+* master                             617f37b Merge pull request #14 from FERNmatrix/guidry_debug1
+  remotes/origin/B1GNetwork          fa03365 Add files via upload
+  remotes/origin/CleanSlate          f652106 Merge branch 'CleanSlate' of https://github.com/FERNmatrix/Thermo-nuclear-network into Plots_and_Figures
+  remotes/origin/HEAD                -> origin/master
+  remotes/origin/Nick-branch         608b948 testing push of latest code 4/6/22
+  remotes/origin/PE_fix              7abf61a Auto Script
+  remotes/origin/PEcorrections       f61f4c0 Altered Makefile to include a gdb flag on compilation
+  remotes/origin/Plots_and_Figures   1a611dd updated NATS?
+  remotes/origin/TS_Case             684049b new TS_Case plot file
+  remotes/origin/TS_corrections      57b4c5a Added plots and fixed EMATS.cpp
+  remotes/origin/TimeStep            e3f8e13 Up to date code: UpdateY0 fucntion includes ReactionGroup objects
+  remotes/origin/TimestepTests       a8b2ae1 Update explicitMatrix.cpp
+  remotes/origin/guidry_debug1       a1aecde Adding hydro profile output option.
+  remotes/origin/guidry_debug2       58b428b Reaction objects are now formed w/o a segfault after changing all string variables to char variables in Reaction. Done in slapdash fashion so it compiles but with many warnings about inconsistencies for char variables. If run, it instantiates the Reaction reaction[] objects now, but is crashing in reading in the network rate parameters after the first several reactions.
+:...skipping...
+* master                             617f37b Merge pull request #14 from FERNmatrix/guidry_debug1
+  remotes/origin/B1GNetwork          fa03365 Add files via upload
+  remotes/origin/CleanSlate          f652106 Merge branch 'CleanSlate' of https://github.com/FERNmatrix/Thermo-nuclear-network into Plots_and_Figures
+  remotes/origin/HEAD                -> origin/master
+  remotes/origin/Nick-branch         608b948 testing push of latest code 4/6/22
+  remotes/origin/PE_fix              7abf61a Auto Script
+  remotes/origin/PEcorrections       f61f4c0 Altered Makefile to include a gdb flag on compilation
+  remotes/origin/Plots_and_Figures   1a611dd updated NATS?
+  remotes/origin/TS_Case             684049b new TS_Case plot file
+  remotes/origin/TS_corrections      57b4c5a Added plots and fixed EMATS.cpp
+  remotes/origin/TimeStep            e3f8e13 Up to date code: UpdateY0 fucntion includes ReactionGroup objects
+  remotes/origin/TimestepTests       a8b2ae1 Update explicitMatrix.cpp
+  remotes/origin/guidry_debug1       a1aecde Adding hydro profile output option.
+  remotes/origin/guidry_debug2       58b428b Reaction objects are now formed w/o a segfault after changing all string variables to char variables in Reaction. Done in slapdash fashion so it compiles but with many warnings about inconsistencies for char variables. If run, it instantiates the Reaction reaction[] objects now, but is crashing in reading in the network rate parameters after the first several reactions.
+  remotes/origin/guidry_debugSpline  0952a4b added two hydro profiles
+  remotes/origin/hackathon           3145aca gpu testing
+  remotes/origin/master              617f37b Merge pull request #14 from FERNmatrix/guidry_debug1
+  remotes/origin/outputFix           bf312c7 moved fprintf diagnostic output to arrays
+  remotes/origin/splineinterpolation a992eb2 Updated Interpolator
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+jared@adam-X555QA:~/Thermo-nuclear-network$ git log -p [explicitMatrix.cpp/explicitMatrix]
+jared@adam-X555QA:~/Thermo-nuclear-network$ git checkout splineinterpolation
+Branch 'splineinterpolation' set up to track remote branch 'splineinterpolation' from 'origin'.
+Switched to a new branch 'splineinterpolation'
+jared@adam-X555QA:~/Thermo-nuclear-network$ git ls-remote <remote>
+bash: syntax error near unexpected token `newline'
+jared@adam-X555QA:~/Thermo-nuclear-network$ git ls-remote splineinterpolation
+fatal: 'splineinterpolation' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+jared@adam-X555QA:~/Thermo-nuclear-network$ git remote show splineinterpolation
+fatal: 'splineinterpolation' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+jared@adam-X555QA:~/Thermo-nuclear-network$ 

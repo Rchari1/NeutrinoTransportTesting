@@ -1,0 +1,21 @@
+jared@adam-X555QA:~$ gcc --version
+gcc (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0
+Copyright (C) 2019 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+jared@adam-X555QA:~$ mkdir ~/CPP.c
+jared@adam-X555QA:~$ cd CPP.c
+jared@adam-X555QA:~/CPP.c$ touch main.c
+jared@adam-X555QA:~/CPP.c$ ls
+main.c
+jared@adam-X555QA:~/CPP.c$ nano main.c
+jared@adam-X555QA:~/CPP.c$ 
+
+jared@adam-X555QA:~/CPP.c$ gcc -o CPP.c main.c
+jared@adam-X555QA:~/CPP.c$ ls
+CPP.c  main.c
+jared@adam-X555QA:~/CPP.c$ ./CPP.c
+It works.
+jared@adam-X555QA:~/CPP.c$ 
+

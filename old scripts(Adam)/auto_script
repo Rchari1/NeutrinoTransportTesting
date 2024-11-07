@@ -1,0 +1,32 @@
+gcc NATS.cpp -o NATS -lgsl -lgslcblas -lm -lstdc++
+./NATS
+1
+2
+1e-7
+rm /Adaptive_Peramiters_Log/1*
+cd gnu_out
+cp *.data /explicitMatrix/Adaptive_Peramiters_Log/1
+cd ..
+./NATS
+2
+3
+1e-7
+rm /Adaptive_Peramiters_Log/2*
+cd gnu_out
+cp *.data /explicitMatrix/Adaptive_Peramiters_Log/2
+cd ..
+./NATS
+3
+2
+1e-9
+rm /Adaptive_Peramiters_Log/3*
+cd gnu_out
+cp *.data /explicitMatrix/Adaptive_Peramiters_Log/3
+cd .../NATS
+4
+3
+1e-9
+rm /Adaptive_Peramiters_Log/4*
+cd gnu_out
+cp *.data /explicitMatrix/Adaptive_Peramiters_Log/4
+cd ..

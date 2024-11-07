@@ -1,0 +1,38 @@
+%This is a matlab script that processed askii data files to a format that could be read by an existing script. 
+
+function processDataFiles(directory, numPlotFiles)
+    % Initialize arrays to hold the data
+    t_values = zeros(1, numPlotFiles);
+    dt_values = zeros(1, numPlotFiles);
+    N_values = zeros(40, numPlotFiles);
+
+    % Loop through each plot file
+    for i = 0:numPlotFiles-1
+        % Construct the file name
+        fileName = fullfile(directory, sprintf('PlotFile_%d', i));
+        
+        % Open the file
+        fid = fopen(fileName, 'r');
+        if fid == -1
+            error('Could not open file %s', fileName);
+        end
+        
+        % Read the t value
+        t_line = fgetl(fid);
+        t_values(i+1) = sscanf(t_line, 't: %f');
+        
+        % Read the dt value
+        dt_line = fgetl(fid);
+        dt_values(i+1) = sscanf(dt_line, 'dt: %f');
+        
+        % Read the N values
+        N_line = fgetl(fid);
+        N_values(:, i+1) = sscanf(N_line, 'N:%f')';
+        
+        % Close the file
+        fclose(fid);
+    end
+
+    % Save the arrays to the workspace
+    save('processedData.mat', 't_values', 'dt_values', 'N_values');
+end

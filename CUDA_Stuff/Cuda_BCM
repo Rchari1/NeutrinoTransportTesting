@@ -1,0 +1,126 @@
+#include <iostream>
+#include <vector>
+#include <cmath>
+#include <cuda_runtime.h>
+
+__global__ void buildCollisionMatrixKernel(
+    double* A, double* k, double* R_In, double* R_Out,
+    double* N, double* dV, int N_g, double tol
+) {
+    int i = blockIdx.x * blockDim.x + threadIdx.x;
+
+    if (i < N_g) {
+        for (int j = 0; j < N_g; j++) {
+            double N_Eq_i = 0.0;
+            double N_Eq_j = 0.0;
+
+            if (j != i) {
+                double B = (R_In[i * N_g + j] * dV[i] + R_Out[i * N_g + j] * dV[j]);
+                double C = dV[i] * N[i] + dV[j] * N[j];
+                double a = (R_In[i * N_g + j] - R_Out[i * N_g + j]) * dV[i];
+                double b = B + (R_In[i * N_g + j] - R_Out[i * N_g + j]) * C;
+                double c = R_In[i * N_g + j] * C;
+                double d = b * b - 4.0 * a * c;
+                N_Eq_i = 0.5 * (b - sqrt(d)) / a;
+                N_Eq_j = (C - (N_Eq_i * dV[i])) / dV[j];
+            } else {
+                N_Eq_i = N[i];
+                N_Eq_j = N[j];
+            }
+
+            double diff_i = abs(N_Eq_i - N[i]) / fmax(1e-16, N_Eq_i);
+            double diff_j = abs(N_Eq_j - N[j]) / fmax(1e-16, N_Eq_j);
+
+            if (diff_i > tol || diff_j > tol) {
+                A[i * N_g + j] += (1.0 - N[i]) * R_In[i * N_g + j] * dV[j];
+                A[i * N_g + i] -= R_Out[i * N_g + j] * dV[j] * (1.0 - N[j]);
+                k[i] += R_Out[i * N_g + j] * dV[j] + (R_In[i * N_g + j] * dV[j] - R_Out[i * N_g + j] * dV[j]) * N[j];
+            }
+        }
+    }
+}
+
+std::pair<std::vector<std::vector<double>>, std::vector<double>> BuildCollisionMatrix_NES_CUDA(
+    std::vector<std::vector<double>>& R_In,
+    std::vector<std::vector<double>>& R_Out,
+    std::vector<double>& N,
+    std::vector<double>& dV,
+    int N_g,
+    double tol
+) {
+    std::pair<std::vector<std::vector<double>>, std::vector<double>> result;
+
+    std::vector<std::vector<double>>& A = result.first;
+    std::vector<double>& k = result.second;
+
+    A.resize(N_g);
+    for (int i = 0; i < N_g; i++) {
+        A[i].resize(N_g, 0.0);
+    }
+
+    k.resize(N_g, 0.0);
+
+    // Allocate device memory
+    double* d_R_In;
+    double* d_R_Out;
+    double* d_N;
+    double* d_dV;
+    double* d_A;
+    double* d_k;
+
+    cudaMalloc((void**)&d_R_In, N_g * N_g * sizeof(double));
+    cudaMalloc((void**)&d_R_Out, N_g * N_g * sizeof(double));
+    cudaMalloc((void**)&d_N, N_g * sizeof(double));
+    cudaMalloc((void**)&d_dV, N_g * sizeof(double));
+    cudaMalloc((void**)&d_A, N_g * N_g * sizeof(double));
+    cudaMalloc((void**)&d_k, N_g * sizeof(double));
+
+    // Copy data to device
+    cudaMemcpy(d_R_In, &R_In[0][0], N_g * N_g * sizeof(double), cudaMemcpyHostToDevice);
+    cudaMemcpy(d_R_Out, &R_Out[0][0], N_g * N_g * sizeof(double), cudaMemcpyHostToDevice);
+    cudaMemcpy(d_N, &N[0], N_g * sizeof(double), cudaMemcpyHostToDevice);
+    cudaMemcpy(d_dV, &dV[0], N_g * sizeof(double), cudaMemcpyHostToDevice);
+
+    // Launch kernel
+    int threadsPerBlock = 256;
+    int blocksPerGrid = (N_g + threadsPerBlock - 1) / threadsPerBlock;
+
+    buildCollisionMatrixKernel<<<blocksPerGrid, threadsPerBlock>>>(
+        d_A, d_k, d_R_In, d_R_Out, d_N, d_dV, N_g, tol
+    );
+
+    // Copy results back to host
+    cudaMemcpy(&A[0][0], d_A, N_g * N_g * sizeof(double), cudaMemcpyDeviceToHost);
+    cudaMemcpy(&k[0], d_k, N_g * sizeof(double), cudaMemcpyDeviceToHost);
+
+    // Free device memory
+    cudaFree(d_R_In);
+    cudaFree(d_R_Out);
+    cudaFree(d_N);
+    cudaFree(d_dV);
+    cudaFree(d_A);
+    cudaFree(d_k);
+
+    return result;
+}
+
+int main() {
+    // Example usage
+    std::vector<std::vector<double>> R_In = {{...}};
+    std::vector<std::vector<double>> R_Out = {{...}};
+    std::vector<double> N = {...};
+    std::vector<double> dV = {...};
+
+    int N_g = R_In.size();
+    double tol = 1e-6;
+
+    auto result = BuildCollisionMatrix_NES_CUDA(R_In, R_Out, N, dV, N_g, tol);
+
+    // Access results
+    std::vector<std::vector<double>>& A = result.first;
+    std::vector<double>& k = result.second;
+
+    // Print or use the results as needed...
+
+    return 0;
+}

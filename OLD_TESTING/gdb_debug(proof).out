@@ -1,0 +1,82 @@
+GNU gdb (Ubuntu 9.2-0ubuntu1~20.04.1) 9.2
+Copyright (C) 2020 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from NT.out...
+(gdb) brak main
+(gdb) break main
+Breakpoint 1 at 0x83b1: file NeutrinoTransport.cpp, line 19.
+(gdb) r
+Starting program: /home/jared/NeutrinoTransport/NT.out 
+
+Breakpoint 1, main () at NeutrinoTransport.cpp:19
+19	int main() {
+(gdb) break Init[KtializeNES
+Breakpoint 2 at 0x55555555819c: file Source/InitializeNES.h, line 7.
+(gdb) break 75
+Breakpoint 3 at 0x55555555c9ad: file NeutrinoTransport.cpp, line 75.
+(gdb) c
+Continuing.
+
+Breakpoint 2, InitializeNES (Model="", N_g=92, 
+    eC=std::vector of length -122539419686621223, capacity 1111658064221089747 = {...}, dV=std::vector of length -5864062007649, capacity -17592186042964 = {...}, 
+    R_In=std::vector of length 0, capacity 0, 
+    R_Out=<error reading variable: Cannot access memory at address 0x9>, 
+    N_Eq=<error reading variable: Cannot access memory at address 0x3f00000045>)
+    at Source/InitializeNES.h:7
+7	void InitializeNES(std::string Model, int N_g, std::vector<double>& eC, std::vector<double>& dV, std::vector<std::vector<double> >& R_In, std::vector<std::vector<double> >& R_Out, std::vector<double>& N_Eq) {
+(gdb) p eC
+$1 = std::vector of length -122539419686621223, capacity 1111658064221089747 = {(gdb) n
+10	  eC = ReadData1D("Data/NES_RATES_EnergyBinCenter.dat", N_g);
+(gdb) p eC
+$2 = std::vector of length 40, capacity 40 = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+  0, 0}
+(gdb) n
+14	  std::vector<double> de = ReadData1D("Data/NES_RATES_EnergyBinWidth.dat", N_g);
+(gdb) p eC
+$3 = std::vector of length 40, capacity 64 = {1.0063894015341779, 
+  3.0780419845922831, 5.2708862437592874, 7.5920118920875614, 10.04892339084304, 
+  12.649564212275713, 15.402342521762197, 18.31615836235364, 21.400432429619684, 
+  24.665136529820792, 28.120825819883663, 31.778672933415212, 35.650504103088359, 
+  39.748837396187383, 44.086923186932701, 48.678786996436621, 53.539274838796516, 
+  58.684101219934469, 64.129899944368987, 69.89427789418292, 75.995871954060988, 
+  82.454409266441914, 89.290771011597116, 96.527059918843918, 104.18667172716464, 
+  112.29437082627211, 120.87637032267739, 129.96041678962237, 139.57587997488366, 
+  149.75384775648268, 160.52722665330529, 171.93084821559199, 184.0015816392725, 
+  196.77845296823827, 210.30277126994855, 224.61826219230889, 239.77120933362733, 
+  255.81060388271285, 272.78830301291987, 290.75919754224407}
+(gdb) c
+Continuing.
+
+Breakpoint 3, main () at NeutrinoTransport.cpp:75
+75	    vector<vector<double> > R_In_H(N_g);
+(gdb) p eC
+$4 = std::vector of length 40, capacity 64 = {1.0063894015341779, 
+  3.0780419845922831, 5.2708862437592874, 7.5920118920875614, 10.04892339084304, 
+  12.649564212275713, 15.402342521762197, 18.31615836235364, 21.400432429619684, 
+  24.665136529820792, 28.120825819883663, 31.778672933415212, 35.650504103088359, 
+  39.748837396187383, 44.086923186932701, 48.678786996436621, 53.539274838796516, 
+  58.684101219934469, 64.129899944368987, 69.89427789418292, 75.995871954060988, 
+  82.454409266441914, 89.290771011597116, 96.527059918843918, 104.18667172716464, 
+  112.29437082627211, 120.87637032267739, 129.96041678962237, 139.57587997488366, 
+  149.75384775648268, 160.52722665330529, 171.93084821559199, 184.0015816392725, 
+  196.77845296823827, 210.30277126994855, 224.61826219230889, 239.77120933362733, 
+  255.81060388271285, 272.78830301291987, 290.75919754224407}
+(gdb) quit
+A debugging session is active.
+
+	Inferior 1 [process 16128] will be killed.
+
+Quit anyway? (y or n) y
